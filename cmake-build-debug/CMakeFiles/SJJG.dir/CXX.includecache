@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/elderly/Desktop/Git/DataStructure_Task/11.26/exp3-3.cpp
+liqueue.cpp
+/Users/elderly/Desktop/Git/DataStructure_Task/11.26/liqueue.cpp
+
+/Users/elderly/Desktop/Git/DataStructure_Task/11.26/liqueue.cpp
+stdio.h
+-
+sys/malloc.h
+-
+
+/Users/elderly/Desktop/Git/DataStructure_Task/main.cpp
+iostream
+-
+11.26/exp3-3.cpp
+/Users/elderly/Desktop/Git/DataStructure_Task/11.26/exp3-3.cpp
+
