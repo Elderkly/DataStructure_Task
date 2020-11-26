@@ -4,6 +4,7 @@
 
 # include <stdio.h>
 # include <sys/malloc.h>
+extern "C";
 typedef char ElemType;
 typedef struct DataNode{
     ElemType data;              //  数据域
