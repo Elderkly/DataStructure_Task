@@ -25,12 +25,6 @@ int main()
     for(int i = 0;i < SIZE; i++) {
         Insert(&L2,b[i],i + 1);
     }
-    //  一次遍历找到中间结点
-    DataNode *mid = L2->next,*p= L2->next;
-    while(mid && p && mid->next && p->next) {
-        mid = mid->next;
-        p = p->next->next;
-    }
     FindMidElm(L2);
     EndFind(L2,2);
 }
