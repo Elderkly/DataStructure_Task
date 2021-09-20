@@ -13,11 +13,15 @@ typedef struct node{
 typedef struct {
     int count;
     DataNode *next;
+    DataNode *next2;
 }*LinkHead,LinkNode;
-int Init(LinkHead *L);
+int Init(LinkHead *L,int DoublePoint);
 int Insert(LinkHead *L,int elem,int pos);
 int Delete(LinkHead *L,int *elem,int pos);
 int Clear(LinkHead *L);
 int Destory(LinkHead *L);
 int Traverse(LinkHead L);
+int SituReplace(LinkHead *L);
+int FindMidElm(LinkHead L);
+int EndFind(LinkHead L,int k);
 #endif //INC_408_DEMO_LINKLIST_H

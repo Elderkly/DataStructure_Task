@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/linkList.h
+stdio.h
+-
+stdlib.h
+-
+
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo/main.c
+stdio.h
+-
+stdlib.h
+-
+./common/linkList.h
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/linkList.h
+
