@@ -4,6 +4,25 @@
 CMakeFiles/408_Demo.dir/common/linkList.c.o: \
  ../common/linkList.c \
  ../common/linkList.h
+CMakeFiles/408_Demo.dir/common/search.c.o: \
+ ../common/search.c \
+ ../common/search.h \
+ ../common/sqList.h \
+ ../common/string.h
+CMakeFiles/408_Demo.dir/common/sort.c.o: \
+ ../common/sort.c \
+ ../common/sort.h \
+ ../common/sqList.h
+CMakeFiles/408_Demo.dir/common/sqList.c.o: \
+ ../common/sqList.c \
+ ../common/sqList.h
+CMakeFiles/408_Demo.dir/common/string.c.o: \
+ ../common/string.c \
+ ../common/string.h
 CMakeFiles/408_Demo.dir/main.c.o: \
  ../common/linkList.h \
+ ../common/search.h \
+ ../common/sort.h \
+ ../common/sqList.h \
+ ../common/string.h \
  ../main.c

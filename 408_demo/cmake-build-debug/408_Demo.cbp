@@ -84,6 +84,30 @@
 		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/linkList.h">
 			<Option target="408_Demo"/>
 		</Unit>
+		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/search.c">
+			<Option target="408_Demo"/>
+		</Unit>
+		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/search.h">
+			<Option target="408_Demo"/>
+		</Unit>
+		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sort.c">
+			<Option target="408_Demo"/>
+		</Unit>
+		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sort.h">
+			<Option target="408_Demo"/>
+		</Unit>
+		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sqList.c">
+			<Option target="408_Demo"/>
+		</Unit>
+		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sqList.h">
+			<Option target="408_Demo"/>
+		</Unit>
+		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/string.c">
+			<Option target="408_Demo"/>
+		</Unit>
+		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/string.h">
+			<Option target="408_Demo"/>
+		</Unit>
 		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/main.c">
 			<Option target="408_Demo"/>
 		</Unit>

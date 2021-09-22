@@ -8,7 +8,7 @@
 // Created by Elderly on 2021/9/19.
 //
 
-int Init(LinkHead *L,int DoublePoint)
+int InitLinkList(LinkHead *L,int DoublePoint)
 {
     LinkHead p=(LinkHead)malloc(sizeof(LinkNode));
     DataNode *q=(DataNode *)malloc(sizeof(DataNode));
@@ -96,7 +96,10 @@ int Traverse(LinkHead L)
     return 0;
 }
 
-//  原地置换算法
+/*
+ * 功能：原地置换算法
+ * 思路：头插法
+ * */
 int SituReplace(LinkHead *L) {
     if ((*L)->count == 0) {
         return -1;
@@ -142,7 +145,7 @@ int EndFind(LinkHead L,int k) {
     }
     while (p1->next && p2->next) {
         p1 = p1->next;
-        p2 = p2 ->next;
+        p2 = p2->next;
     }
     printf("\n倒数第%d个元素为%d",k,p1->elem);
     return 0;
@@ -151,7 +154,7 @@ int EndFind(LinkHead L,int k) {
 
 //int main() {
 //    LinkHead L;
-//    Init(&L,0);
+//    InitLinkList(&L,0);
 //    int n,m;
 //    printf("输入线性表大小:");
 //    scanf("%d",&n);

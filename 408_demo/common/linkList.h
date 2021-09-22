@@ -15,7 +15,7 @@ typedef struct {
     DataNode *next;
     DataNode *next2;
 }*LinkHead,LinkNode;
-int Init(LinkHead *L,int DoublePoint);
+int InitLinkList(LinkHead *L,int DoublePoint);
 int Insert(LinkHead *L,int elem,int pos);
 int Delete(LinkHead *L,int *elem,int pos);
 int Clear(LinkHead *L);

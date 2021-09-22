@@ -9,6 +9,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/linkList.c" "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/cmake-build-debug/CMakeFiles/408_Demo.dir/common/linkList.c.o"
+  "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/search.c" "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/cmake-build-debug/CMakeFiles/408_Demo.dir/common/search.c.o"
+  "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sort.c" "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/cmake-build-debug/CMakeFiles/408_Demo.dir/common/sort.c.o"
+  "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sqList.c" "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/cmake-build-debug/CMakeFiles/408_Demo.dir/common/sqList.c.o"
+  "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/string.c" "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/cmake-build-debug/CMakeFiles/408_Demo.dir/common/string.c.o"
   "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/main.c" "/Users/el/Desktop/Git/DataStructure_Task/408_Demo/cmake-build-debug/CMakeFiles/408_Demo.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

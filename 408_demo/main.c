@@ -2,29 +2,67 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include "./common/linkList.h"
+#include "./common/string.h"
+#include "./common/sqList.h"
+#include "./common/search.h"
+#include "./common/sort.h"
 int main()
 {
-    //  原地置换
-    LinkHead L;
-    Init(&L,1);
-    const int SIZE = 5;
-    int a[SIZE] = {10,20,30,50,60};
-    for(int i = 0;i < SIZE; i++) {
-        Insert(&L,a[i],i + 1);
+    /***顺序表***/
+    SqList S;
+    InitSqList(&S);
+    int data[10] = {9,2,92,4,12,3,55,9,8,0};
+    for (int i = 0; i < 10; i++) {
+        InsertSqList(&S, i+1, data[i]);
     }
-    printf("原数组:\n");
-    Traverse(L);
-    printf("\n新数组:\n");
-    SituReplace(&L);
-    Traverse(L);
+//    int deleteElm;
+//    printf("元素5在第%d个位置", SqListFindElmByValue(S,5));
+//    DeleteSqList(&S,5, deleteElm);
+//    OutPutSqList(S);
+//    printf("元素5在第%d个位置\n", SqListFindElmByValue(S,5));
+//    SqListSituReplace(S);
+//    OutPutSqList(S);
 
-    //双指针
-    LinkHead L2;
-    Init(&L2,1);
-    int b[SIZE] = {1,2,10,4,5};
-    for(int i = 0;i < SIZE; i++) {
-        Insert(&L2,b[i],i + 1);
-    }
-    FindMidElm(L2);
-    EndFind(L2,2);
+    /***单链表***/
+    //  原地置换
+//    LinkHead L;
+//    InitLinkList(&L,1);
+//    const int SIZE = 5;
+//    int a[SIZE] = {10,20,30,50,60};
+//    for(int i = 0;i < SIZE; i++) {
+//        Insert(&L,a[i],i + 1);
+//    }
+//    printf("原数组:\n");
+//    Traverse(L);
+//    printf("\n新数组:\n");
+//    SituReplace(&L);
+//    Traverse(L);
+//
+//    //双指针
+//    LinkHead L2;
+//    InitLinkList(&L2,1);
+//    int b[SIZE] = {1,2,10,4,5};
+//    for(int i = 0;i < SIZE; i++) {
+//        Insert(&L2,b[i],i + 1);
+//    }
+//    FindMidElm(L2);
+//    EndFind(L2,2);
+
+    /**模式串匹配**/
+//    SString T1;
+//    SString T2;
+//    char a[14] = {'a','b','c','d','g','o','o','d','g','o','o','g','l','e'};
+//    char b[6] = {'g','o','o','g','l','e'};
+//    InitString(&T1,a,14);
+//    InitString(&T2,b,6);
+//    printf("模式串匹配结果%d", Index(T1,T2));
+
+    /**查找算法**/
+//     折半查找
+//    printf("元素0在第%d个位置", Binary_Search(S,0) + 1);
+
+    /**排序算法**/
+    InsertSort(S);
+    printf("\n插入排序后的数组");
+    OutPutSqList(S);
 }
