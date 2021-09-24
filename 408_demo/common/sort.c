@@ -3,13 +3,14 @@
 //
 
 #include <printf.h>
+#include <stdlib.h>
 #include "sort.h"
 //
 // Created by Elderly on 2021/9/21.
 //
 
 /*
- * 功能：折半插入排序
+ * 算法名称：折半插入排序
  * 适用于：顺序表
  * **/
 int InsertSort(SqList L) {
@@ -42,3 +43,88 @@ int InsertSort(SqList L) {
     }
     return 0;
 }
+
+/*
+ * 算法名称：冒泡排序
+ * 适用于：顺序表
+ * */
+int BubbleSort(SqList L) {
+    int tab = 0;
+    for (int i = 0; i < L.length; i++) {
+        tab = 0;
+        for (int j = L.length - 1; j > i; j--) {
+            if (L.data[j-1] > L.data[j]) {
+                int temp = L.data[j];
+                L.data[j] = L.data[j-1];
+                L.data[j-1] = temp;
+                tab = 1;
+            }
+        }
+        if (tab == 0) return 0;
+    }
+    return 0;
+}
+
+/*
+ * 算法名称：快速排序
+ * 适用于：顺序表
+ * */
+int QuickSort(SqList L) {
+    return MainQuickSort(L,0,L.length - 1);
+}
+//  快速排序-将原表划分为两个子表
+int MainQuickSort(SqList L, int low, int height) {
+    if (low < height) {
+        int index = Partition(L,low,height);
+        MainQuickSort(L,low, index - 1);
+        MainQuickSort(L,index + 1,height);
+    }
+    return 0;
+}
+//  确定中间元素的最终位置
+int Partition(SqList L, int low, int height) {
+    int baseElm = L.data[low];
+    while(low < height) {
+        while(low < height && L.data[height] >= baseElm) height--;
+        L.data[low] = L.data[height];
+        while(low < height && L.data[low] <= baseElm) low++;
+        L.data[height] =L.data[low];
+    }
+    L.data[low] = baseElm;
+    return low;
+}
+
+/*
+ * 算法名称：二路归并排序
+ * 适用于：顺序表
+ * */
+int MergeSort(SqList L) {
+    return MainMergeSort(L,0,L.length-1);
+}
+int MainMergeSort(SqList L,int low, int height){
+    if (low < height) {
+        int mid = (low + height) / 2;
+        MainMergeSort(L, low, mid);
+        MainMergeSort(L, mid + 1, height);
+        ArrayMerge(L,low,height,mid);
+    }
+    return 1;
+}
+int ArrayMerge(SqList L,int low, int height, int mid) {
+    //  生成辅助数组
+    int *B = (int *)malloc((height - low) * sizeof(int));
+    int i,j,k;
+    //  复制元素到辅助数组中
+    for (k = low; k <= height; k++) {
+        B[k]=L.data[k];
+    }
+    //  对两个子表同时进行遍历，筛选出两个子表中相对较小的一个复制到原数组中
+    for (i = low, j = mid + 1,k = i; i <= mid && j <=height; k++) {
+        L.data[k] = B[i] <= B[j] ? B[i++] : B[j++];
+    }
+    //  其中一个子表遍历完成 将另外一个子表剩余的内容直接赋值到原数组中
+    while(i <= mid) L.data[k++] = B[i++];
+    while(j <= height) L.data[k++] = B[j++];
+    return 1;
+}
+

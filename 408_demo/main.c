@@ -6,15 +6,16 @@
 #include "./common/sqList.h"
 #include "./common/search.h"
 #include "./common/sort.h"
+#include "./common/queue.h"
 int main()
 {
     /***顺序表***/
-    SqList S;
-    InitSqList(&S);
-    int data[10] = {9,2,92,4,12,3,55,9,8,0};
-    for (int i = 0; i < 10; i++) {
-        InsertSqList(&S, i+1, data[i]);
-    }
+//    SqList S;
+//    InitSqList(&S);
+//    int data[10] = {0,22,1,5,-1,9,2,10,11,13};
+//    for (int i = 0; i < 10; i++) {
+//        InsertSqList(&S, i+1, data[i]);
+//    }
 //    int deleteElm;
 //    printf("元素5在第%d个位置", SqListFindElmByValue(S,5));
 //    DeleteSqList(&S,5, deleteElm);
@@ -62,7 +63,53 @@ int main()
 //    printf("元素0在第%d个位置", Binary_Search(S,0) + 1);
 
     /**排序算法**/
-    InsertSort(S);
-    printf("\n插入排序后的数组");
-    OutPutSqList(S);
+    //  插入排序
+//    InsertSort(S);
+//    printf("\n插入排序后的数组");
+//    OutPutSqList(S);
+//    //  冒泡排序
+//    BubbleSort(S);
+//    printf("\n冒泡排序后的数组");
+//    OutPutSqList(S);
+    //  快速排序
+//    QuickSort(S);
+//    OutPutSqList(S);
+    //  归并排序
+//    MergeSort(S);
+//    OutPutSqList(S);
+
+    //  队列
+    int value;          //用于保存出队的元素
+    //创建队列对象
+    Queue PQueue;
+
+    //调用初始化队列的函数
+    InitQueue(&PQueue,20);
+    //调用出队函数
+    EnQueue(&PQueue, 1);
+    EnQueue(&PQueue, 2);
+    EnQueue(&PQueue, 3);
+    EnQueue(&PQueue, 4);
+    EnQueue(&PQueue, 5);
+    EnQueue(&PQueue, 6);
+    EnQueue(&PQueue, 7);
+    EnQueue(&PQueue, 8);
+    //调用遍历队列的函数
+    QueueTraverse(PQueue);
+    //调用出队函数
+    if(DeQueue(&PQueue, &value))
+    {
+        printf("出队一次，元素为：%d\n", value);
+    }
+//    QueueTraverse(PQueue);
+    if(DeQueue(&PQueue, &value))
+    {
+        printf("出队一次，元素为：%d\n", value);
+    }
+    printf("\n");
+    QueueTraverse(PQueue);
+
+    DestroyQueue(&PQueue);
+
+    return 0;
 }

@@ -144,6 +144,32 @@ CMakeFiles/408_Demo.dir/common/sort.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/408_Demo.dir/common/sort.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sort.c -o CMakeFiles/408_Demo.dir/common/sort.c.s
 
+CMakeFiles/408_Demo.dir/common/tree.c.o: CMakeFiles/408_Demo.dir/flags.make
+CMakeFiles/408_Demo.dir/common/tree.c.o: ../common/tree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/el/Desktop/Git/DataStructure_Task/408_Demo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/408_Demo.dir/common/tree.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/408_Demo.dir/common/tree.c.o -c /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/tree.c
+
+CMakeFiles/408_Demo.dir/common/tree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/408_Demo.dir/common/tree.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/tree.c > CMakeFiles/408_Demo.dir/common/tree.c.i
+
+CMakeFiles/408_Demo.dir/common/tree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/408_Demo.dir/common/tree.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/tree.c -o CMakeFiles/408_Demo.dir/common/tree.c.s
+
+CMakeFiles/408_Demo.dir/common/queue.c.o: CMakeFiles/408_Demo.dir/flags.make
+CMakeFiles/408_Demo.dir/common/queue.c.o: ../common/queue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/el/Desktop/Git/DataStructure_Task/408_Demo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/408_Demo.dir/common/queue.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/408_Demo.dir/common/queue.c.o -c /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.c
+
+CMakeFiles/408_Demo.dir/common/queue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/408_Demo.dir/common/queue.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.c > CMakeFiles/408_Demo.dir/common/queue.c.i
+
+CMakeFiles/408_Demo.dir/common/queue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/408_Demo.dir/common/queue.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.c -o CMakeFiles/408_Demo.dir/common/queue.c.s
+
 # Object files for target 408_Demo
 408_Demo_OBJECTS = \
 "CMakeFiles/408_Demo.dir/main.c.o" \
@@ -151,7 +177,9 @@ CMakeFiles/408_Demo.dir/common/sort.c.s: cmake_force
 "CMakeFiles/408_Demo.dir/common/sqList.c.o" \
 "CMakeFiles/408_Demo.dir/common/search.c.o" \
 "CMakeFiles/408_Demo.dir/common/string.c.o" \
-"CMakeFiles/408_Demo.dir/common/sort.c.o"
+"CMakeFiles/408_Demo.dir/common/sort.c.o" \
+"CMakeFiles/408_Demo.dir/common/tree.c.o" \
+"CMakeFiles/408_Demo.dir/common/queue.c.o"
 
 # External object files for target 408_Demo
 408_Demo_EXTERNAL_OBJECTS =
@@ -162,9 +190,11 @@ CMakeFiles/408_Demo.dir/common/sort.c.s: cmake_force
 408_Demo: CMakeFiles/408_Demo.dir/common/search.c.o
 408_Demo: CMakeFiles/408_Demo.dir/common/string.c.o
 408_Demo: CMakeFiles/408_Demo.dir/common/sort.c.o
+408_Demo: CMakeFiles/408_Demo.dir/common/tree.c.o
+408_Demo: CMakeFiles/408_Demo.dir/common/queue.c.o
 408_Demo: CMakeFiles/408_Demo.dir/build.make
 408_Demo: CMakeFiles/408_Demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/el/Desktop/Git/DataStructure_Task/408_Demo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable 408_Demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/el/Desktop/Git/DataStructure_Task/408_Demo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable 408_Demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/408_Demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

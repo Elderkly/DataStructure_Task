@@ -153,6 +153,30 @@ common/linkList.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/linkList.c.s
 .PHONY : common/linkList.c.s
 
+common/queue.o: common/queue.c.o
+.PHONY : common/queue.o
+
+# target to build an object file
+common/queue.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/queue.c.o
+.PHONY : common/queue.c.o
+
+common/queue.i: common/queue.c.i
+.PHONY : common/queue.i
+
+# target to preprocess a source file
+common/queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/queue.c.i
+.PHONY : common/queue.c.i
+
+common/queue.s: common/queue.c.s
+.PHONY : common/queue.s
+
+# target to generate assembly for a file
+common/queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/queue.c.s
+.PHONY : common/queue.c.s
+
 common/search.o: common/search.c.o
 .PHONY : common/search.o
 
@@ -249,6 +273,30 @@ common/string.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/string.c.s
 .PHONY : common/string.c.s
 
+common/tree.o: common/tree.c.o
+.PHONY : common/tree.o
+
+# target to build an object file
+common/tree.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/tree.c.o
+.PHONY : common/tree.c.o
+
+common/tree.i: common/tree.c.i
+.PHONY : common/tree.i
+
+# target to preprocess a source file
+common/tree.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/tree.c.i
+.PHONY : common/tree.c.i
+
+common/tree.s: common/tree.c.s
+.PHONY : common/tree.s
+
+# target to generate assembly for a file
+common/tree.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/tree.c.s
+.PHONY : common/tree.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -285,6 +333,9 @@ help:
 	@echo "... common/linkList.o"
 	@echo "... common/linkList.i"
 	@echo "... common/linkList.s"
+	@echo "... common/queue.o"
+	@echo "... common/queue.i"
+	@echo "... common/queue.s"
 	@echo "... common/search.o"
 	@echo "... common/search.i"
 	@echo "... common/search.s"
@@ -297,6 +348,9 @@ help:
 	@echo "... common/string.o"
 	@echo "... common/string.i"
 	@echo "... common/string.s"
+	@echo "... common/tree.o"
+	@echo "... common/tree.i"
+	@echo "... common/tree.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
