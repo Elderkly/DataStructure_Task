@@ -84,12 +84,6 @@
 		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/linkList.h">
 			<Option target="408_Demo"/>
 		</Unit>
-		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.c">
-			<Option target="408_Demo"/>
-		</Unit>
-		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.h">
-			<Option target="408_Demo"/>
-		</Unit>
 		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/search.c">
 			<Option target="408_Demo"/>
 		</Unit>

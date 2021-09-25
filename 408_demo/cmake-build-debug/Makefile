@@ -153,30 +153,6 @@ common/linkList.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/linkList.c.s
 .PHONY : common/linkList.c.s
 
-common/queue.o: common/queue.c.o
-.PHONY : common/queue.o
-
-# target to build an object file
-common/queue.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/queue.c.o
-.PHONY : common/queue.c.o
-
-common/queue.i: common/queue.c.i
-.PHONY : common/queue.i
-
-# target to preprocess a source file
-common/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/queue.c.i
-.PHONY : common/queue.c.i
-
-common/queue.s: common/queue.c.s
-.PHONY : common/queue.s
-
-# target to generate assembly for a file
-common/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/408_Demo.dir/build.make CMakeFiles/408_Demo.dir/common/queue.c.s
-.PHONY : common/queue.c.s
-
 common/search.o: common/search.c.o
 .PHONY : common/search.o
 
@@ -333,9 +309,6 @@ help:
 	@echo "... common/linkList.o"
 	@echo "... common/linkList.i"
 	@echo "... common/linkList.s"
-	@echo "... common/queue.o"
-	@echo "... common/queue.i"
-	@echo "... common/queue.s"
 	@echo "... common/search.o"
 	@echo "... common/search.i"
 	@echo "... common/search.s"

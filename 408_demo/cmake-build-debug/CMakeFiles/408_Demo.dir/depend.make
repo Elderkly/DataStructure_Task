@@ -4,9 +4,6 @@
 CMakeFiles/408_Demo.dir/common/linkList.c.o: \
  ../common/linkList.c \
  ../common/linkList.h
-CMakeFiles/408_Demo.dir/common/queue.c.o: \
- ../common/queue.c \
- ../common/queue.h
 CMakeFiles/408_Demo.dir/common/search.c.o: \
  ../common/search.c \
  ../common/search.h \
@@ -27,9 +24,9 @@ CMakeFiles/408_Demo.dir/common/tree.c.o: \
  ../common/tree.h
 CMakeFiles/408_Demo.dir/main.c.o: \
  ../common/linkList.h \
- ../common/queue.h \
  ../common/search.h \
  ../common/sort.h \
  ../common/sqList.h \
  ../common/string.h \
+ ../common/tree.h \
  ../main.c

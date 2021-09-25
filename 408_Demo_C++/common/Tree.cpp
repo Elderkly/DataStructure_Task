@@ -1,8 +1,15 @@
+//
+// Created by Elderly on 2021/9/25.
+//
 
-#include <stdbool.h>
-#include "stdio.h"
-#include "stdlib.h"
-#include "tree.h"
+#include "Tree.h"
+//
+// Created by Elderly on 2021/9/25.
+//
+
+#include <cstdio>
+#include <cstdlib>
+
 
 //初始化顺序存储的二叉树，所有结点标记为"空"
 void InitSqBiTree(TreeNode t[], int length) {
@@ -154,7 +161,7 @@ void PostOrder(BiTree root) {
 }
 
 //初始化队列(队列带头结点)
-void InitQueue(Queue Q) {
+void InitQueue(Queue &Q) {
     //初始时 front、rear 都指向头结点
     Q.front = Q.rear = (QNode *) malloc(sizeof(QNode));
     Q.front->next = NULL;
@@ -168,7 +175,7 @@ bool IsEmpty(Queue Q) {
 }
 
 //新元素入队（队列带头结点）
-void EnQueue(Queue Q,BiTNode *x){
+void EnQueue(Queue &Q,BiTNode *x){
     //新结点插到表尾之后
     //修改表尾指针
     QNode *s = (QNode *) malloc(sizeof(QNode));
@@ -178,7 +185,7 @@ void EnQueue(Queue Q,BiTNode *x){
     Q.rear = s;
 }
 //队头元素出队（队列带头结点）
-bool DeQueue(Queue Q, BiTNode *x){
+bool DeQueue(Queue &Q, BiTNode * &x){
     //空队
     if(Q.front==Q.rear)
         return false;
@@ -190,7 +197,7 @@ bool DeQueue(Queue Q, BiTNode *x){
     x = p->data;
     Q.front->next = p->next;
     if(Q.rear==p)
-    Q.rear = Q.front;
+        Q.rear = Q.front;
     free(p);
     //释放结点空间
     return true;
@@ -211,52 +218,54 @@ void LevelOrder(BiTree T) {
             EnQueue(Q, p->rchild); //右孩子入队
     }
 }
+/****此方法存在BUG***/
 //基于"层序遍历"的思想，判断一棵二叉树是否是完全二叉树。
-bool IsCompleteBinaryTree(BiTree T) {
-    if (T == NULL) {
+bool IsCompleteBinaryTree(BiTree T){
+    if (T==NULL){
         printf("老哥，空树不是完全二叉树");
-        return false; //不是完全二叉树，返回0
+        return false;   //不是完全二叉树，返回0
     }
     Queue Q;
-    InitQueue(Q);
+    InitQueue(Q);   //初始化辅助队列
     BiTree p;
-    EnQueue(Q, T);
-    bool flag = false;
-    while (!IsEmpty(Q)) {
-        if (p->lchild == NULL && p->rchild != NULL) {
+    EnQueue(Q,T);   //将根结点入队
+    bool flag = false; //层序遍历时，只要出现第一个叶子，或出现第一个只有左孩子的结点，则后序所有结点都必须是叶子
+    while(!IsEmpty(Q)){   //队列不空则循环
+        DeQueue(Q, p);   //队头结点出队
+        // 当前结点没有左孩子，但是有右孩子的结点，则一定不是完全二叉树
+        if(p->lchild==NULL && p->rchild!=NULL){
             return false;
         }
         //当前结点是叶子结点，则之后出现的结点必须是叶子
-        if (p->lchild == NULL && p->rchild == NULL) {
-            //flag=true，表示之后必须全都是叶子
-            flag = true;
+        if(p->lchild==NULL && p->rchild==NULL){
+            flag = true;    //flag=true，表示之后必须全都是叶子
         }
         //当前结点有左孩子，但是没有右孩子，则之后出现的结点必须是都叶子
-        if (p->lchild != NULL && p->rchild == NULL) {
-            //之前就出现过叶子，或之前就出现过只有一个孩子的分支节点
-            if (flag) {
-                return false; //不是完全二叉树
+        if(p->lchild!=NULL && p->rchild==NULL){
+            if (flag) {         //之前就出现过叶子，或之前就出现过只有一个孩子的分支节点
+                 return false;   //不是完全二叉树
             }
-            //flag=true，表示之后必须全都是叶子
-            flag = true;
+            flag = true;    //flag=true，表示之后必须全都是叶子
         }
         //当前结点有左孩子，也右孩子
-        if (p->lchild != NULL && p->rchild != NULL) {
+        if(p->lchild!=NULL && p->rchild!=NULL){
             if (flag) {
                 //之前就出现过叶子，或之前就出现过只有一个孩子的分支节点
-                return false; //不是完全二叉树
+                return false;   //不是完全二叉树
             }
         }
         visit(p);
-        if (p->lchild != NULL)
-            EnQueue(Q, p->lchild); //左孩子入队
-        if (p->rchild != NULL)
-            EnQueue(Q, p->rchild); //右孩子入队
+        if(p->lchild!=NULL)
+            EnQueue(Q,p->lchild);  //左孩子入队
+        if(p->rchild!=NULL)
+            EnQueue(Q,p->rchild);  //右孩子入队
     }
+    return flag;
 }
 
 //用笨方法创建一棵二叉树
 BiTree creatTree() {
+    BiTNode *test;
     BiTree root = (BiTree) malloc(sizeof(BiTNode));
     root->data = 1;
     BiTNode *p1 = (BiTNode *) malloc(sizeof(BiTNode));
@@ -333,7 +342,7 @@ int treeWidth(BiTree T) {
 }
 
 //利用已有的顺序二叉树，构建一棵等价的链式二叉树。本质上就是对顺序存储的二叉树进行先序遍历，同时构建新结点
-void CreateBySqBiTree(TreeNode t[], int length, int index, BiTree root){
+void CreateBySqBiTree(TreeNode t[], int length, int index, BiTree &root){
     //判断以 t[index] 为根的树是否为空
     if(isEmpty(t, length, index)){
         //如果是空树，那么链式二叉树的根指针指向空即可
@@ -383,7 +392,7 @@ int test_CreateBySqBiTree() {
         //插入12个结点（就是王道数据结构考点精讲视频 5.2.3 的第一个例子，大家可以看看课件）
         //插入结点后标记为非空
     }
-    BiTree *root;
+    BiTree root;
     //链式存储的二叉树
     CreateBySqBiTree(t, 100, 1, root);
     printf("\n【对链式存储的二叉树先序遍历】：");
@@ -431,26 +440,26 @@ int test_BiTreeWidth() {
 }
 
 void test_IsCompleteBinaryTree() {
-//随便创建一棵二叉树
-    BiTree root = creatTree();
-    printf("\n【对链式存储的二叉树先序遍历】：");
-    PreOrder(root);
-    printf("\n【对链式存储的二叉树中序遍历】：");
-    InOrder(root);
-    printf("\n【对链式存储的二叉树层序遍历】：");
-    LevelOrder(root);
-    printf("\n【层序遍历检查是否是完全二叉树】：");
-    if (IsCompleteBinaryTree(root)) {
-        printf("\n 这棵二叉树是完全二叉树");
-    } else {
-        printf("\n 这棵二叉树不是完全二叉树");
-    }
+////随便创建一棵二叉树
+//    BiTree root = creatTree();
+//    printf("\n【对链式存储的二叉树先序遍历】：");
+//    PreOrder(root);
+//    printf("\n【对链式存储的二叉树中序遍历】：");
+//    InOrder(root);
+//    printf("\n【对链式存储的二叉树层序遍历】：");
+//    LevelOrder(root);
+//    printf("\n【层序遍历检查是否是完全二叉树】：");
+//    if (IsCompleteBinaryTree(root)) {
+//        printf("\n 这棵二叉树是完全二叉树");
+//    } else {
+//        printf("\n 这棵二叉树不是完全二叉树");
+//    }
     //再建立一棵二叉树，利用顺序二叉树生成链式二叉树
     TreeNode t[100];
     //定义一棵顺序存储的二叉树
     InitSqBiTree(t, 100); //初始化为空的顺序二叉树
     //往顺序二叉树插入一些原始数据，用t[1]作为根节点，t[0]不会用于存储任何东西
-    for (int i = 1; i <= 15; i++) {
+    for (int i = 1; i <= 4; i++) {
         t[i].data = i;
         t[i].isEmpty = false;
         //插入12个结点（就是王道数据结构考点精讲视频 5.2.3 的第一个例子，大家可以看看课件）
@@ -472,4 +481,3 @@ void test_IsCompleteBinaryTree() {
         printf("\n 这棵二叉树不是完全二叉树");
     }
 }
-

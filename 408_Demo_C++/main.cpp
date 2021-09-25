@@ -1,15 +1,13 @@
+#include <iostream>
+#include "./common/Tree.h"
 
-#include<stdio.h>
-#include<stdlib.h>
-#include "./common/linkList.h"
-#include "./common/string.h"
-#include "./common/sqList.h"
-#include "./common/search.h"
-#include "./common/sort.h"
-#include "./common/tree.h"
+int main() {
+    test_SqBiTree();
+    test_CreateBySqBiTree();
+    test_CreateByBiTree();
+    test_BiTreeWidth();
+    test_IsCompleteBinaryTree();
 
-int main()
-{
     /***顺序表***/
 //    SqList S;
 //    InitSqList(&S);
@@ -78,7 +76,5 @@ int main()
     //  归并排序
 //    MergeSort(S);
 //    OutPutSqList(S);
-    test_SqBiTree();
-    test_CreateBySqBiTree();
     return 0;
 }

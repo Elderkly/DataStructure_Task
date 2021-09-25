@@ -4,9 +4,6 @@
 CMakeFiles/408_Demo.dir/common/linkList.c.o
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/linkList.c
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/linkList.h
-CMakeFiles/408_Demo.dir/common/queue.c.o
- /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.c
- /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.h
 CMakeFiles/408_Demo.dir/common/search.c.o
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/search.c
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/search.h
@@ -27,9 +24,9 @@ CMakeFiles/408_Demo.dir/common/tree.c.o
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/tree.h
 CMakeFiles/408_Demo.dir/main.c.o
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/linkList.h
- /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.h
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/search.h
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sort.h
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sqList.h
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/string.h
+ /Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/tree.h
  /Users/el/Desktop/Git/DataStructure_Task/408_Demo/main.c

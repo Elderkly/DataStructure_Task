@@ -1,9 +1,12 @@
 //
-// Created by Elderly on 2021/9/24.
+// Created by Elderly on 2021/9/25.
+//
 
-#ifndef INC_408_DEMO_TREE_H
-#define INC_408_DEMO_TREE_H
-#include <stdbool.h>
+#ifndef INC_408_DEMO_C___TREE_H
+#define INC_408_DEMO_C___TREE_H
+
+#include <cstdio>
+#include <cstdlib>
 #define H 10
 // 下面这段代码实现的二叉树的顺序存储，以及基于顺序存储的二叉树如何找左/右孩子、如何找父节点，如何基于顺序二叉树实现前中后序遍历
 // 建议同学们从 test_SqBiTree() 函数开始阅读代码
@@ -51,7 +54,6 @@ typedef struct BiTNode {
 //数据域
     struct BiTNode *lchild, *rchild; //左、右孩子指针
 } BiTNode, *BiTree;
-BiTNode *test;
 
 //访问二叉树的结点 p
 void visit(BiTNode *p);
@@ -74,14 +76,14 @@ typedef struct {
 } Queue;
 
 //初始化队列(队列带头结点)
-void InitQueue(Queue Q);
+void InitQueue(Queue &Q);
 //判断队列是否为空（队列带头结点）
 bool IsEmpty(Queue Q);
 
 //新元素入队（队列带头结点）
-void EnQueue(Queue Q,BiTNode *x);
+void EnQueue(Queue &Q,BiTNode *x);
 //队头元素出队（队列带头结点）
-bool DeQueue(Queue Q, BiTNode *x);
+bool DeQueue(Queue &Q, BiTNode *&x);
 
 //层序遍历
 void LevelOrder(BiTree T);
@@ -99,7 +101,7 @@ void PreOrderWidth(BiTree T, int level, int *width);
 int treeWidth(BiTree T);
 
 //利用已有的顺序二叉树，构建一棵等价的链式二叉树。本质上就是对顺序存储的二叉树进行先序遍历，同时构建新结点
-void CreateBySqBiTree(TreeNode t[], int length, int index, BiTree root);
+void CreateBySqBiTree(TreeNode t[], int length, int index, BiTree &root);
 
 // 利用已有的链式二叉树，构建一棵等价的顺序二叉树。目前传入的根节点 root，应该对应数组中的 t[index]
 void CreateByBiTree(TreeNode t[], int length, int index, BiTree root);
@@ -113,4 +115,5 @@ int test_CreateByBiTree();
 int test_BiTreeWidth();
 
 void test_IsCompleteBinaryTree();
-#endif //INC_408_DEMO_TREE_H
+
+#endif //INC_408_DEMO_C___TREE_H
