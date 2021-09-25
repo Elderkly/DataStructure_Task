@@ -1,12 +1,13 @@
 #include <iostream>
 #include "./common/Tree.h"
+#include "./common/BST_Tree.h"
 
 int main() {
-    test_SqBiTree();
-    test_CreateBySqBiTree();
-    test_CreateByBiTree();
-    test_BiTreeWidth();
-    test_IsCompleteBinaryTree();
+//    test_SqBiTree();
+//    test_CreateBySqBiTree();
+//    test_CreateByBiTree();
+//    test_BiTreeWidth();
+//    test_IsCompleteBinaryTree();
 
     /***顺序表***/
 //    SqList S;
@@ -76,5 +77,7 @@ int main() {
     //  归并排序
 //    MergeSort(S);
 //    OutPutSqList(S);
+
+    test_BinarySearchTree();
     return 0;
 }

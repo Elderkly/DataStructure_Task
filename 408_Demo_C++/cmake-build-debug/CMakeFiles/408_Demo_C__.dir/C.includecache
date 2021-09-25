@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/SqList.c
+SqList.h
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/SqList.h
+stdlib.h
+-
+printf.h
+-
+
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/SqList.h
+

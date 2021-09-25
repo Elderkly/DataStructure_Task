@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/BST_Tree.cpp
+BST_Tree.h
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/BST_Tree.h
+cstdio
+-
+cstdlib
+-
+
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/BST_Tree.h
+
