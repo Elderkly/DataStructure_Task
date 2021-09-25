@@ -6,37 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/linkList.h
-stdio.h
--
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.c
 stdlib.h
 -
-
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/search.h
-sqList.h
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sqList.h
-
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sort.h
-sqList.h
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sqList.h
-
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sqList.h
-
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/string.h
-
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/main.c
-stdio.h
+printf.h
 -
-stdlib.h
--
-./common/linkList.h
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/linkList.h
-./common/string.h
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/string.h
-./common/sqList.h
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sqList.h
-./common/search.h
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/search.h
-./common/sort.h
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/sort.h
+queue.h
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.h
+
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo/common/queue.h
 
