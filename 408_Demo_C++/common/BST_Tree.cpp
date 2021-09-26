@@ -121,6 +121,21 @@ int BST_Insert(BSTree &T, int k) {
         return BST_Insert(T->rchild, k);
 }
 
+//在二叉排序树插入关键字为k的新结点（非递归实现）
+//int BSTInsert(BSTree & T, int k) {
+//    //原树为空，新插入的结点为根结点
+//    if (T == NULL) {
+//        T = (BSTree) malloc(sizeof(BSTNode));
+//        T->key = k;
+//        T->lchild = T->rchild = NULL;
+//        //返回1，插入成功
+//        return 1;
+//    }
+//    while (T != NULL) {
+//
+//    }
+//}
+
 //在二叉排序树 T 中删除结点 p（不考虑p为根节点的情况）
 int BST_DeleteNode(BSTree &T, BSTNode *p) {
     if (p == NULL)
@@ -128,9 +143,9 @@ int BST_DeleteNode(BSTree &T, BSTNode *p) {
     //先找到 p 的父节点 father
     BSTNode *f = findFather(T, p);
     //判断 p 是 f 的左孩子 还是 右孩子
-    bool isLchild = false;
     //isLchild == false 表示 p 是右孩子
     //isLchild == true 表示 p 是左孩子
+    bool isLchild = false;
     if (f->lchild == p)
         isLchild = true;
     // p 是叶子，直接删除，同时要修改其父节点的指针
@@ -156,8 +171,8 @@ int BST_DeleteNode(BSTree &T, BSTNode *p) {
             //p是f的右孩子
             f->rchild = p->lchild; //父节点f的右指针指向p的左子树
         }
-        free(p);
         //释放结点 p
+        free(p);
         //删除成功，返回1
         return 1;
     }

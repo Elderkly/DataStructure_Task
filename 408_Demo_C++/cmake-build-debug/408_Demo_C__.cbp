@@ -86,6 +86,12 @@
 		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/BST_Tree.h">
 			<Option target="408_Demo_C__"/>
 		</Unit>
+		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/HashTable.cpp">
+			<Option target="408_Demo_C__"/>
+		</Unit>
+		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/HashTable.h">
+			<Option target="408_Demo_C__"/>
+		</Unit>
 		<Unit filename="/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/Tree.cpp">
 			<Option target="408_Demo_C__"/>
 		</Unit>

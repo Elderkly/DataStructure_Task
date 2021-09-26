@@ -6,13 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/BST_Tree.cpp
-BST_Tree.h
 /Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/BST_Tree.h
+
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/HashTable.h
+cstdlib
+-
+cstdio
+-
+
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/Tree.h
 cstdio
 -
 cstdlib
 -
 
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/main.cpp
+iostream
+-
+./common/Tree.h
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/Tree.h
+./common/BST_Tree.h
 /Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/BST_Tree.h
+./common/HashTable.h
+/Users/el/Desktop/Git/DataStructure_Task/408_Demo_C++/common/HashTable.h
 
